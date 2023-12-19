@@ -1,0 +1,3 @@
+[submodule "FairFace"]
+	path = FairFace
+	url = https://github.com/dchen236/FairFace
