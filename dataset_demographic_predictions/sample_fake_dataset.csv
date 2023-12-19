@@ -1,0 +1,26 @@
+image,label,partition,id,face_name_align,race,race4,gender,age,race_scores_fair,race_scores_fair_4,gender_scores_fair,age_scores_fair
+pexels-andrea-piacquadio-774909.jpg,happy,train,pexels-andrea-piacquadio-774909,/media/iris.dominguez/DATA2/workspace/DSAP/sample_fake_dataset/detected_faces/pexels-andrea-piacquadio-774909_face0.jpg,White,White,Female,20-29,"[9.7805727e-01 1.4440698e-06 3.7860349e-03 1.1410581e-04 7.4508695e-05
+ 8.5741747e-05 1.7880941e-02]",[9.9928743e-01 2.2158879e-06 3.4372474e-04 3.6668425e-04],[1.796243e-05 9.999820e-01],"[1.2678608e-07 1.1228634e-04 3.7536085e-02 7.2818029e-01 2.2206172e-01
+ 1.2015821e-02 9.2009264e-05 1.6130296e-06 3.2313878e-08]"
+pexels-andrea-piacquadio-3760790.jpg,angry,train,pexels-andrea-piacquadio-3760790,/media/iris.dominguez/DATA2/workspace/DSAP/sample_fake_dataset/detected_faces/pexels-andrea-piacquadio-3760790_face0.jpg,East Asian,Asian,Male,30-39,"[6.7892959e-03 1.1158152e-03 1.9307467e-03 5.8457923e-01 4.0520105e-01
+ 1.6991081e-04 2.1403907e-04]",[0.19437507 0.00350837 0.8012612  0.00085543],[0.9935433  0.00645671],"[4.0692071e-06 4.6297628e-05 4.0886961e-03 2.2313553e-01 4.0541148e-01
+ 2.4764045e-01 1.0458593e-01 1.2696076e-02 2.3914105e-03]"
+pexels-andrea-piacquadio-3812721.jpg,angry,val,pexels-andrea-piacquadio-3812721,/media/iris.dominguez/DATA2/workspace/DSAP/sample_fake_dataset/detected_faces/pexels-andrea-piacquadio-3812721_face0.jpg,White,White,Female,10-19,"[9.9985927e-01 1.3831171e-07 4.8354363e-05 1.2203292e-05 2.0709247e-05
+ 1.5285339e-06 5.7833258e-05]",[9.9972761e-01 1.9143761e-05 2.0866316e-04 4.4609118e-05],[0.01036557 0.9896344 ],"[2.0137443e-06 1.3597745e-02 4.9642491e-01 4.6803960e-01 2.0841574e-02
+ 1.0852305e-03 8.4251651e-06 3.6389315e-07 1.2711534e-07]"
+pexels-ike-louie-natividad-2709388.jpg,happy,train,pexels-ike-louie-natividad-2709388,/media/iris.dominguez/DATA2/workspace/DSAP/sample_fake_dataset/detected_faces/pexels-ike-louie-natividad-2709388_face0.jpg,East Asian,Asian,Female,20-29,"[1.1593706e-04 1.7482422e-04 3.7893429e-04 7.2443324e-01 2.7486429e-01
+ 3.0565912e-05 2.2275294e-06]",[8.2246348e-05 4.2968455e-05 9.9987012e-01 4.6192426e-06],[0.00108817 0.9989118 ],"[2.18306923e-06 1.31258171e-03 2.64455557e-01 6.60523891e-01
+ 6.85713217e-02 5.01118507e-03 1.04954954e-04 1.61554544e-05
+ 2.13844123e-06]"
+pexels-ketut-subiyanto-4584665.jpg,sad,train,pexels-ketut-subiyanto-4584665,/media/iris.dominguez/DATA2/workspace/DSAP/sample_fake_dataset/detected_faces/pexels-ketut-subiyanto-4584665_face0.jpg,Black,Black,Male,40-49,"[1.1203173e-05 9.9914438e-01 8.1750433e-05 3.2550167e-07 4.2278275e-06
+ 6.9256133e-04 6.5552456e-05]",[5.6907746e-05 9.9543858e-01 3.4329012e-05 4.4701658e-03],[9.9999690e-01 3.1138977e-06],"[7.2982010e-07 3.6974143e-06 1.8949612e-04 2.0931831e-02 2.0373155e-01
+ 5.5929291e-01 1.9787608e-01 1.6878279e-02 1.0954916e-03]"
+pexels-pixabay-35011.jpg,neutral,train,pexels-pixabay-35011,/media/iris.dominguez/DATA2/workspace/DSAP/sample_fake_dataset/detected_faces/pexels-pixabay-35011_face0.jpg,Middle Eastern,White,Male,70+,"[0.08618016 0.00158069 0.01199428 0.00140148 0.01012425 0.07037469
+ 0.8183445 ]",[9.6860075e-01 5.6961231e-05 1.9220639e-03 2.9420251e-02],[0.99826515 0.00173485],"[2.4190743e-07 2.4775605e-07 1.1957260e-06 6.7170945e-06 6.2179301e-06
+ 2.1237833e-05 1.1918092e-03 1.1714201e-01 8.8163030e-01]"
+pexels-teona-swift-6874381.jpg,sad,val,pexels-teona-swift-6874381,/media/iris.dominguez/DATA2/workspace/DSAP/sample_fake_dataset/detected_faces/pexels-teona-swift-6874381_face0.jpg,White,White,Female,50-59,"[9.9550247e-01 3.2990974e-06 2.2200383e-03 1.3838011e-04 1.0705828e-04
+ 1.2033970e-05 2.0167255e-03]",[9.9432403e-01 8.6130683e-05 4.9191657e-03 6.7062274e-04],[0.00149333 0.99850667],"[2.6161320e-06 2.6561784e-05 1.0691911e-04 5.6029332e-04 1.1588724e-02
+ 1.8781561e-01 5.2670592e-01 2.3816665e-01 3.5026785e-02]"
+pexels-vanessa-pozos-17413023.jpg,happy,val,pexels-vanessa-pozos-17413023,/media/iris.dominguez/DATA2/workspace/DSAP/sample_fake_dataset/detected_faces/pexels-vanessa-pozos-17413023_face0.jpg,Middle Eastern,White,Female,20-29,"[8.1452474e-02 2.2496644e-05 1.5192328e-02 3.7906764e-05 4.9196529e-05
+ 1.3666600e-02 8.8957900e-01]",[0.64693564 0.0010138  0.01023006 0.34182048],[3.6848745e-05 9.9996310e-01],"[2.9866669e-09 9.9641484e-06 1.4377116e-02 8.5429251e-01 1.2995918e-01
+ 1.3556315e-03 5.4813299e-06 6.2814919e-08 7.1303985e-10]"
