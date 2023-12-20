@@ -2,7 +2,15 @@ import itertools
 import pandas as pd
 import profile_generation
 
-demographic_predictions_path = "dataset_demographic_predictions"
+import os
+import dlib
+from FairFace import predict as fairface
+
+from pathlib import Path
+import contextlib
+
+
+DEMOGRAPHIC_PREDICTIONS_PATH = "dataset_demographic_predictions"
 
 base_demographic_groups = {
     'gender': ['Female', 'Male'],
@@ -17,16 +25,44 @@ def get_groups(axis):
         axis.sort()
         return itertools.product(*[base_demographic_groups[a] for a in axis])
 
-def load_demographic_info(dataset):
-    demographic_info = pd.read_csv(f"{demographic_predictions_path}/{dataset}.csv")
-    return demographic_info
+@contextlib.contextmanager
+#temporarily change to a different working directory
+def temporaryWorkingDirectory(path):
+    _oldCWD = os.getcwd()
+    os.chdir(os.path.abspath(path))
 
-def load_axis_profile(dataset, axis, partition=None):
-    demographic_info = load_demographic_info(dataset)
-    if partition:
-        demographic_info = demographic_info[demographic_info['partition'] == partition]
-    axis_profile = profile_generation.generate_profile(demographic_info, 
-                                                       axis, 
-                                                       base_groups=get_groups(axis))
-    axis_profile = axis_profile.sort_values()
-    return axis_profile
+    try:
+        yield
+    finally:
+        os.chdir(_oldCWD)
+
+def process_auxiliary_model_csv(original_csv, aux_csv, output_csv):
+    original = pd.read_csv(original_csv, sep=";")
+    aux = pd.read_csv(aux_csv, sep=",")
+
+    original['id'] = original['image'].apply(lambda x: Path(x).stem)
+    aux['id'] = aux['face_name_align'].apply(lambda x: Path(x).stem.removesuffix("_face0"))
+
+    output = original.merge(aux, on='id')
+    output.to_csv(output_csv, index=False)
+
+def generate_demographic_information(dataset_path, input_csv, output_csv):
+    dlib.DLIB_USE_CUDA = True
+    print("using CUDA?: %s" % dlib.DLIB_USE_CUDA)
+    
+    dataset_path = os.path.abspath(dataset_path)
+    input_csv = os.path.abspath(input_csv)
+    output_csv = os.path.abspath(output_csv)
+    
+    with temporaryWorkingDirectory("FairFace"):
+        save_at_path = f"{dataset_path}/detected_faces"
+        
+        fairface.ensure_dir(save_at_path)
+        
+        imgs = pd.read_csv(input_csv, sep=";")['image']
+        imgs = f"{dataset_path}/" + imgs
+        fairface.detect_face(imgs, save_at_path)
+        fairface.predidct_age_gender_race(output_csv, save_at_path)
+    
+        process_auxiliary_model_csv(input_csv, output_csv, output_csv)
+        
